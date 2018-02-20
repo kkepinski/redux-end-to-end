@@ -16,7 +16,13 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   module: {
-    rules: []
+    rules: [
+      {
+        test: /.jsx?$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      }
+    ]
   },
   devtool: '#cheap-module-source-map',
   devServer: {
